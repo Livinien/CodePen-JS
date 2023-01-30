@@ -79,8 +79,6 @@ tallTextarea.addEventListener("keyup", () => {
     } else if(tallTextarea != tallTextarea.value) {
         document.querySelector("#loader").style.display = "block";
         document.querySelector("#progress").style.display = "block";
-        console.log(tallTextarea.value.length);
-
     };
    
 });
@@ -89,46 +87,44 @@ tallTextarea.addEventListener("keyup", () => {
 
 // AFFICHER LA PROGRESSION DE LA BAR EN POURCENTAGE EN FONCTION DU NOMBRE DE CARACTERE DANS LA TEXTAREA
 
-const numberCharacter = tallTextarea.value.length;
-
-const characterLimit = tallTextarea.length;
-
 tallTextarea.addEventListener("keyup", () => {
 
-    if(numberCharacter < 50) {
+    const numberCharacter = tallTextarea.value.length;
+
+    if(numberCharacter <= 50) {
         
         document.querySelector("#progress").style.background = "#ff1515";
         document.querySelector("#progress").style.width = "10%";
         document.querySelector("#progress_bar").innerHTML = "10%";
 
-    } else if(numberCharacter < 51 && characterLimit > 100) {
+    } else if(numberCharacter >= 50 && numberCharacter <= 100) {
 
         document.querySelector("#progress").style.background = "#ff7000";
         document.querySelector("#progress").style.width = "30%";
         document.querySelector("#progress_bar").innerHTML = "30%";
         console.log("30%");
 
-    } else if(numberCharacter < 101 && characterLimit > 150) {
+    } else if(numberCharacter >= 100 && numberCharacter <= 150) {
 
-        document.querySelector("#progress").style.background = "#ff6400";
+        document.querySelector("#progress").style.background = "#fff300";
         document.querySelector("#progress").style.width = "50%";
         document.querySelector("#progress_bar").innerHTML = "50%";
 
-    } else if(numberCharacter < 151 && characterLimit > 170) {
+    } else if(numberCharacter >= 150 && numberCharacter <= 170) {
 
-        document.querySelector("#progress").style.background = "#00e711";
+        document.querySelector("#progress").style.background = "#aeff02";
         document.querySelector("#progress").style.width = "70%";
         document.querySelector("#progress_bar").innerHTML = "70%";
 
-    } else if(numberCharacter < 171 && characterLimit > 200) {
+    } else if(numberCharacter >= 170 && numberCharacter < 200) {
 
         document.querySelector("#progress").style.background = "#00e711";
-        document.querySelector("#progress").style.width = "100%";
+        document.querySelector("#progress").style.width = "78%";
         document.querySelector("#progress_bar").innerHTML = "100%";
 
-    } else {
+    } else if(numberCharacter === 200) {
         document.querySelector("#progress").style.background = "#00e711";
-        document.querySelector("#progress_bar").innerHTML = "Vous avez atteint la limite de caractère dans ce champs";
+        document.querySelector("#progress_bar").innerHTML = "Vous avez atteint la limite de caractère dans ce champs"; 
     }
 
 });
