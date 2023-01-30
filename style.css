@@ -1,0 +1,98 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+/* PREMIERE PARTIE DU PROJET */
+
+.btn-run {
+    margin: 40px 0 0 110px;
+    padding: 3px;
+}
+
+.container {
+    display: flex;
+    padding: 20px;
+}
+
+.container .cadre {
+    padding-left: 90px;
+}
+
+textarea {
+    padding: 10px;
+    resize: none;
+}
+
+#title {
+    margin-top: 20px;
+    padding-left: 110px;
+}
+
+
+
+/* DEUXIEME PARTIE DU PROJET */
+
+.title-two {
+    margin-top: 90px;
+    padding-left: 90px;
+}
+
+.button1 {
+    margin: 30px 5px 30px 90px;
+    padding: 5px;
+    font-weight: bold;
+}
+
+.button2 {
+    padding: 5px;
+    font-weight: bold;
+}
+
+.wrapper .cadre {
+    padding-left: 90px;
+}
+
+textarea {
+    padding: 10px;
+    margin-bottom: 15px;
+    resize: none;
+}
+
+.live-coding {
+    margin: 80px 5px 50px 90px;
+    padding: 5px;
+}
+
+#title2 {
+    margin: 200px 5px 90px 90px;
+    margin-bottom: 90px;
+}
+
+
+
+
+/* AFFICHAGE DE LA PROGRESS BAR */
+
+#progress {
+    width: 78%;
+    height: 30px;
+    background: #bdbdbd;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+#progress_bar {
+    display: flex;
+    justify-content: flex-end;
+    width: 98%;
+    height: 100%;
+    transform: translateY(15%);
+    font-weight: bold;
+    color: black;
+    font-size: 19px;
+    font-family: 'Quicksand', sans-serif;
+}
+
