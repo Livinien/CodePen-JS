@@ -102,7 +102,6 @@ tallTextarea.addEventListener("keyup", () => {
         document.querySelector("#progress").style.background = "#ff7000";
         document.querySelector("#progress").style.width = "30%";
         document.querySelector("#progress_bar").innerHTML = "30%";
-        console.log("30%");
 
     } else if(numberCharacter >= 100 && numberCharacter <= 150) {
 
@@ -126,6 +125,26 @@ tallTextarea.addEventListener("keyup", () => {
         document.querySelector("#progress").style.background = "#00e711";
         document.querySelector("#progress_bar").innerHTML = "Vous avez atteint la limite de caractère dans ce champs"; 
     }
-
 });
+
+
+
+
+// METTRE EN PLACE LE LOCALSTORAGE POUR LES TEXTAREA
+
+const message = document.querySelector(".field4");
+
+message.addEventListener("keyup", () => {
+    
+    localStorage.setItem("prenom", message.value);
+});
+
+message.value = localStorage.getItem("prenom");
+
+
+
+
+
+
+
 
