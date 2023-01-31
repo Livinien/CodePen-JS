@@ -61,6 +61,22 @@ textarea {
     resize: none;
 }
 
+
+.field_letters {
+    display: flex;
+}
+
+.accountLetter {
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: row;
+    color: #000;
+    margin-top: 235px;
+    padding-left: 20px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
 .live-coding {
     margin: 80px 5px 50px 90px;
     padding: 5px;

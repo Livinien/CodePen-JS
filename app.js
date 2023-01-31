@@ -128,23 +128,76 @@ tallTextarea.addEventListener("keyup", () => {
 });
 
 
+// MISE EN PLACE DU COMPTEUR DE LETTRE DANS LE TEXTEAREA
+
+const input = document.querySelector(".field4");
+const counter = document.querySelector(".field_letters span");
+const maxLength = input.getAttribute("maxlength");
+
+input.addEventListener("input", (e) => {
+    const valueLength = e.target.value.length;
+    const leftCharLength = maxLength - valueLength;
+
+    if(leftCharLength < 0) return;
+    counter.innerHTML = leftCharLength + "/200";
+});
+
+
 
 
 // METTRE EN PLACE LE LOCALSTORAGE POUR LES TEXTAREA
 
+
+// HTML
+
+const textareaHtml = document.querySelector(".field");
+
+textareaHtml.addEventListener("keyup", () => {
+    
+    localStorage.setItem("html", textareaHtml.value);
+});
+
+textareaHtml.value = localStorage.getItem("html");
+
+
+
+
+// CSS
+
+const textareaCss = document.querySelector(".field2");
+
+textareaCss.addEventListener("keyup", () => {
+    
+    localStorage.setItem("css", textareaCss.value);
+});
+
+textareaCss.value = localStorage.getItem("css");
+
+
+
+
+// JAVASCRIPT
+
+const textareaJs = document.querySelector(".field3");
+
+textareaJs.addEventListener("keyup", () => {
+    
+    localStorage.setItem("javascript", textareaJs.value);
+});
+
+textareaJs.value = localStorage.getItem("javascript");
+
+
+
+
+// TALLTEXTAREA
+
 const message = document.querySelector(".field4");
 
 message.addEventListener("keyup", () => {
-    
-    localStorage.setItem("prenom", message.value);
+
+    localStorage.setItem("content_message", message.value);
 });
 
-message.value = localStorage.getItem("prenom");
-
-
-
-
-
-
-
+message.value = localStorage.getItem("content_message");
 
